@@ -14,7 +14,8 @@ import Video from "./images/video-carta.png"
 
 function App() {
 
-  const [products, useProducts] = useState([{
+  const [products, useProducts] = useState([
+          {
     id: 1,
     name: "MacBook",
     price: 100000,
