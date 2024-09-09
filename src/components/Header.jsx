@@ -7,7 +7,6 @@ export const Header = ({products}) => {
     const count = products.filter((el) => {
         return el.bought
     })
-
   return (
     <div className='header'>
         <Logo />

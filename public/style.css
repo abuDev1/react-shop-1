@@ -287,9 +287,15 @@ button.btn {
     cursor: pointer;
 }
 
-.btn[disabled] {
+button.btn_dis {
     cursor: default;
-    background-color: #00339999;
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px;
+    color: #fff;
+    background-color: #4a7ce2;
+
 }
 
 .card-price {

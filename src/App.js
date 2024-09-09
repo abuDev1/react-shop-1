@@ -14,12 +14,12 @@ import Video from "./images/video-carta.png"
 
 function App() {
 
-  const [products, useProducts] = useState([
+  const [products, setProducts] = useState([
           {
     id: 1,
     name: "MacBook",
     price: 100000,
-    bought: true,
+    bought: false,
     rating: 5,
     image: `${macbook}`
 },
@@ -96,11 +96,23 @@ function App() {
         image: `${Video}`
     }])
 
+    const setBought = (idOfButton) => {
+        const newBought = products.map((product)=> {
+            if (product.id === idOfButton){
+                return {
+                    ...product,
+                    bought: !product.bought}
+            }
+            return product;
+        })
+        setProducts(newBought);
+    }
+
 
   return (
     <div className="app">
      <Header products={products}/>
-     <Content products={products}/>
+     <Content products={products} setBought={setBought}/>
     </div>
   );
 }
